@@ -19,4 +19,8 @@ public class ArticuloOrdenado_Controlador {
     public List<Articulo_ordenado> getTodosArticulos(){
         return articuloOrdenadoServicio.getTodosArticulos();
     }
+    @GetMapping("articulomanual")
+    public List<Articulo_ordenado> getTodosArticulosManual(){
+        return articuloOrdenadoServicio.getTodosArticulosManual();
+    }
 }

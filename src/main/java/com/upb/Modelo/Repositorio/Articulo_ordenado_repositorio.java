@@ -10,6 +10,6 @@ public interface Articulo_ordenado_repositorio extends Repository<Articulo_orden
 
     List<Articulo_ordenado> findAll();
 
-    @Query(value = "select  * from Articulos_ordenados",nativeQuery = true)
+    @Query(value = "select  * from Articulos_ordenados where Cantidad_arti > 2",nativeQuery = true)
     List<Articulo_ordenado> traerTodo();
 }
