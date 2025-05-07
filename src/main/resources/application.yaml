@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: "Ecommerceupb"
+  datasource:
+    url: jdbc:mysql://localhost:3306/ProyectoLau
+    username: root
+    password: Pepe2018$$Lps1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
