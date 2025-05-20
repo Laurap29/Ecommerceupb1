@@ -22,8 +22,8 @@ public class ProductoImplementacion implements ProductoServicio {
     }
 
     @Override
-    public List<Producto> getTodosProductoManual(){
-        return productoRepositorio.traerTodo();
+    public Producto getTodosProductoId(Long id){
+        return productoRepositorio.encontrarId(id);
     }
 
 

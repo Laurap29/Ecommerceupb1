@@ -8,7 +8,7 @@ public interface ArticuloOrdenado_Servicio {
 
     List<Articulo_ordenado> getTodosArticulos();
 
-    List<Articulo_ordenado> getTodosArticulosManual();
+    Articulo_ordenado getArticulobyId(Long id);
 
 }
 

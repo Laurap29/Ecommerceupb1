@@ -10,5 +10,6 @@ public interface ProductoServicio {
 
     List<Producto> getTodosProducto();
 
-    List<Producto> getTodosProductoManual();
+    Producto getTodosProductoId(Long id);
+
 }

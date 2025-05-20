@@ -19,8 +19,12 @@ public class ArticuloOrdenado_Implementacion implements ArticuloOrdenado_Servici
     public List<Articulo_ordenado> getTodosArticulos() {
         return articuloOrdenadoRepositorio.findAll();
     }
+
     @Override
-    public List<Articulo_ordenado> getTodosArticulosManual() {
-        return articuloOrdenadoRepositorio.traerTodo();
+    public Articulo_ordenado getArticulobyId(Long id) {
+        return articuloOrdenadoRepositorio.encontrarId(id);
     }
+
+
+
 }

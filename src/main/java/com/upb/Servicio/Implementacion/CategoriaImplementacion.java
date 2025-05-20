@@ -23,8 +23,11 @@ public class CategoriaImplementacion implements CategoriaServicio {
     }
 
     @Override
-    public List<Categoria> getTodosCategoriaManual() {
-        return categoriaRepositorio.traerTodo();
+    public Categoria getCategoriabyId(Long id){
+        return categoriaRepositorio.encontrarId(id);
     }
+
+
+
 
 }

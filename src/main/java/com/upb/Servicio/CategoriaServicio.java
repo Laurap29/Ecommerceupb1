@@ -8,5 +8,5 @@ public interface CategoriaServicio {
 
     List<Categoria> getTodasCategoria();
 
-    List<Categoria> getTodosCategoriaManual();
+    Categoria getCategoriabyId(Long id);
 }

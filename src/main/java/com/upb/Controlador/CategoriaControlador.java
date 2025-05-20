@@ -2,11 +2,13 @@ package com.upb.Controlador;
 
 import com.upb.Modelo.Entidades.Categoria;
 import com.upb.Servicio.CategoriaServicio;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
+@RequestMapping("/categorias")
 public class CategoriaControlador {
 
     private final CategoriaServicio categoriaServicio;
@@ -15,13 +17,14 @@ public class CategoriaControlador {
         this.categoriaServicio = categoriaServicio;
     }
 
-    @GetMapping("/categoriamanual")
-    public List<Categoria> getTodasCategoriaManual(){
-        return categoriaServicio.getTodosCategoriaManual();
-    }
-
     @GetMapping("/categoria")
     public List<Categoria> getTodasCategoria(){
         return categoriaServicio.getTodasCategoria();
     }
+
+    @GetMapping("/{id}")
+    public Categoria getTodosCategoriaId(@PathVariable Long id) {
+        return categoriaServicio.getCategoriabyId(id);
+    }
+
 }

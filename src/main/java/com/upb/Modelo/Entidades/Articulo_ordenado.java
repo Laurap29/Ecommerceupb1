@@ -14,9 +14,9 @@ import lombok.*;
 public class Articulo_ordenado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long ID;
-    Long Cantidad_arti;
-    Long Precio;
-    Long fk_ordenes_id;
-    Long fk_productos_id;
+    private Long ID;
+    private Long Cantidad_arti;
+    private Long Precio;
+    private Long fk_ordenes_id;
+    private Long fk_productos_id;
 }
