@@ -10,5 +10,7 @@ public interface ArticuloOrdenado_Servicio {
 
     Articulo_ordenado getArticulobyId(Long id);
 
+    Articulo_ordenado updateArticulo(Articulo_ordenado articuloOrdenado);
+
 }
 

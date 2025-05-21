@@ -12,4 +12,6 @@ public interface ProductoServicio {
 
     Producto getTodosProductoId(Long id);
 
+    Producto updateProducto(Producto producto);
+
 }

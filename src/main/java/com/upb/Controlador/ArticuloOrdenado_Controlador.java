@@ -2,10 +2,9 @@ package com.upb.Controlador;
 
 import com.upb.Modelo.Entidades.Articulo_ordenado;
 import com.upb.Servicio.ArticuloOrdenado_Servicio;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 @RestController
@@ -27,5 +26,13 @@ public class ArticuloOrdenado_Controlador {
     public Articulo_ordenado getTodosArticuloId(@PathVariable Long id) {
         return articuloOrdenadoServicio.getArticulobyId(id);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Articulo_ordenado> actualizarArticulo(@PathVariable Long id, @RequestBody Articulo_ordenado articuloOrdenado) {
+        articuloOrdenado.setID(id);
+        Articulo_ordenado articuloActualizado = articuloOrdenadoServicio.updateArticulo(articuloOrdenado);
+        return new ResponseEntity<>(articuloActualizado, HttpStatus.OK);
+    }
+
 
 }

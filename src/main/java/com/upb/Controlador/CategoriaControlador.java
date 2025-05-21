@@ -27,4 +27,11 @@ public class CategoriaControlador {
         return categoriaServicio.getCategoriabyId(id);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Categoria> actualizarCategoria(@PathVariable Long id, @RequestBody Categoria categoria) {
+        categoria.setID(id);
+        Categoria categoriaActualizada = categoriaServicio.updateCategoria(categoria);
+        return new ResponseEntity<>(categoriaActualizada, HttpStatus.OK);
+    }
+
 }

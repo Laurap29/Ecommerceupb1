@@ -9,4 +9,6 @@ public interface CategoriaServicio {
     List<Categoria> getTodasCategoria();
 
     Categoria getCategoriabyId(Long id);
+
+    Categoria updateCategoria(Categoria categoria);
 }
